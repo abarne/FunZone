@@ -14,6 +14,8 @@
 		843612C6283ED46000D835DF /* FunZone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 843612C4283ED46000D835DF /* FunZone.xcdatamodeld */; };
 		843612C8283ED46200D835DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843612C7283ED46200D835DF /* Assets.xcassets */; };
 		843612CB283ED46200D835DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843612C9283ED46200D835DF /* LaunchScreen.storyboard */; };
+		843613232840078700D835DF /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613222840078700D835DF /* BookViewController.swift */; };
+		843613252840086800D835DF /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613242840086800D835DF /* BookCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		843612C7283ED46200D835DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843612CA283ED46200D835DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843612CC283ED46200D835DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843613222840078700D835DF /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		843613242840086800D835DF /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				843612C9283ED46200D835DF /* LaunchScreen.storyboard */,
 				843612CC283ED46200D835DF /* Info.plist */,
 				843612C4283ED46000D835DF /* FunZone.xcdatamodeld */,
+				843613222840078700D835DF /* BookViewController.swift */,
+				843613242840086800D835DF /* BookCollectionViewCell.swift */,
 			);
 			path = FunZone;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 			files = (
 				843612C0283ED46000D835DF /* ViewController.swift in Sources */,
 				843612C6283ED46000D835DF /* FunZone.xcdatamodeld in Sources */,
+				843613232840078700D835DF /* BookViewController.swift in Sources */,
+				843613252840086800D835DF /* BookCollectionViewCell.swift in Sources */,
 				843612BC283ED46000D835DF /* AppDelegate.swift in Sources */,
 				843612BE283ED46000D835DF /* SceneDelegate.swift in Sources */,
 			);
