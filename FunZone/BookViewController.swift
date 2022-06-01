@@ -7,11 +7,18 @@
 
 import UIKit
 
-class BookViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+struct Book {
+    let bookTitle: String
+    let bookImage: UIImage
+    let bookText: String
+}
+
+class BookViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
     
-    @IBOutlet weak var bookSearchBar: UISearchBar!
-    let dataText = ["Book1","Book2","Book3","Book4","Book5","Book6","Book7","Book8","Book9","Book10","Book11","Book12","Book13","Book14","Book15","Book16","Book17","Book18","Book19"]
+
+    var dataText = ["Book1","Book2","Book3","Book4","Book5","Book6","Book7","Book8","Book9","Book10","Book11","Book12","Book13","Book14","Book15","Book16","Book17","Book18","Book19"]
     let imgData = ["book.fill"]
+    var sampleText = ["This is some sample text to see if it works. Thanks"]
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -31,6 +38,23 @@ class BookViewController: UIViewController, UICollectionViewDataSource, UICollec
         
     }
 
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let searchView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SearchBar", for: indexPath)
+        return searchView
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("You searched for \(searchBar.text!)")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+      didSelectItemAt indexPath: IndexPath) {
+      
+        print(dataText[indexPath.row])
+        
+      }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
