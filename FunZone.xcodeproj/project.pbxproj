@@ -14,6 +14,14 @@
 		843612C6283ED46000D835DF /* FunZone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 843612C4283ED46000D835DF /* FunZone.xcdatamodeld */; };
 		843612C8283ED46200D835DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843612C7283ED46200D835DF /* Assets.xcassets */; };
 		843612CB283ED46200D835DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843612C9283ED46200D835DF /* LaunchScreen.storyboard */; };
+		843613232840078700D835DF /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613222840078700D835DF /* BookViewController.swift */; };
+		843613252840086800D835DF /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613242840086800D835DF /* BookCollectionViewCell.swift */; };
+		8436132728400ECD00D835DF /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436132628400ECD00D835DF /* SearchBarView.swift */; };
+		84361329284102B800D835DF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361328284102B800D835DF /* SearchViewController.swift */; };
+		8436132B2841133700D835DF /* SingleBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436132A2841133700D835DF /* SingleBookViewController.swift */; };
+		8436136F28416DAF00D835DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436136E28416DAF00D835DF /* LoginViewController.swift */; };
+		843613712846493000D835DF /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613702846493000D835DF /* NotesViewController.swift */; };
+		8436137328464C8100D835DF /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436137228464C8100D835DF /* NotesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		843612C7283ED46200D835DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843612CA283ED46200D835DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843612CC283ED46200D835DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843613222840078700D835DF /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		843613242840086800D835DF /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		8436132628400ECD00D835DF /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		84361328284102B800D835DF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8436132A2841133700D835DF /* SingleBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleBookViewController.swift; sourceTree = "<group>"; };
+		8436136E28416DAF00D835DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		843613702846493000D835DF /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		8436137228464C8100D835DF /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 		843612BA283ED46000D835DF /* FunZone */ = {
 			isa = PBXGroup;
 			children = (
+				843613782846529700D835DF /* CoreData */,
 				843612BB283ED46000D835DF /* AppDelegate.swift */,
 				843612BD283ED46000D835DF /* SceneDelegate.swift */,
 				843612BF283ED46000D835DF /* ViewController.swift */,
@@ -66,8 +83,23 @@
 				843612C9283ED46200D835DF /* LaunchScreen.storyboard */,
 				843612CC283ED46200D835DF /* Info.plist */,
 				843612C4283ED46000D835DF /* FunZone.xcdatamodeld */,
+				843613222840078700D835DF /* BookViewController.swift */,
+				843613242840086800D835DF /* BookCollectionViewCell.swift */,
+				8436132628400ECD00D835DF /* SearchBarView.swift */,
+				84361328284102B800D835DF /* SearchViewController.swift */,
+				8436132A2841133700D835DF /* SingleBookViewController.swift */,
+				8436136E28416DAF00D835DF /* LoginViewController.swift */,
+				843613702846493000D835DF /* NotesViewController.swift */,
+				8436137228464C8100D835DF /* NotesTableViewCell.swift */,
 			);
 			path = FunZone;
+			sourceTree = "<group>";
+		};
+		843613782846529700D835DF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +175,16 @@
 			files = (
 				843612C0283ED46000D835DF /* ViewController.swift in Sources */,
 				843612C6283ED46000D835DF /* FunZone.xcdatamodeld in Sources */,
+				843613712846493000D835DF /* NotesViewController.swift in Sources */,
+				84361329284102B800D835DF /* SearchViewController.swift in Sources */,
+				843613232840078700D835DF /* BookViewController.swift in Sources */,
+				8436132728400ECD00D835DF /* SearchBarView.swift in Sources */,
+				843613252840086800D835DF /* BookCollectionViewCell.swift in Sources */,
+				8436132B2841133700D835DF /* SingleBookViewController.swift in Sources */,
 				843612BC283ED46000D835DF /* AppDelegate.swift in Sources */,
+				8436136F28416DAF00D835DF /* LoginViewController.swift in Sources */,
 				843612BE283ED46000D835DF /* SceneDelegate.swift in Sources */,
+				8436137328464C8100D835DF /* NotesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
