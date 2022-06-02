@@ -29,13 +29,10 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //present music player card
-        let position = indexPath.row
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "player") as? PlayerViewController else{
             return
         }
-        vc.songs = songs
-        vc.position = position
+        vc.song = songs[indexPath.row]
         present(vc, animated: true)
     }
     

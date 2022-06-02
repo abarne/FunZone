@@ -18,27 +18,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fz3-nC-Ntf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bk9-61-0a7">
+                                <rect key="frame" x="156" y="288" width="31" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="default"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButton:" destination="arH-9g-cEX" eventType="touchUpInside" id="FCe-RQ-uvb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Eb-wl-SM4">
+                                <rect key="frame" x="77" y="95" width="261" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ox3-Si-np9">
+                                <rect key="frame" x="77" y="134" width="261" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8h-MS-9ig">
+                                <rect key="frame" x="77" y="184" width="261" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="-1.5" minValue="-1.5" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oRL-OD-Zxl">
+                                <rect key="frame" x="33" y="260" width="349" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="arH-9g-cEX" eventType="valueChanged" id="e4A-Xq-S11"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5g9-mS-ENG">
+                                <rect key="frame" x="226" y="288" width="31" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="stop.fill" catalog="system" symbolScale="default"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="stopButton:" destination="arH-9g-cEX" eventType="touchUpInside" id="6xJ-fH-HH0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vtu-4h-2f3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Fz3-nC-Ntf" firstAttribute="leading" secondItem="vtu-4h-2f3" secondAttribute="leading" id="01R-Kj-GMl"/>
-                            <constraint firstItem="vtu-4h-2f3" firstAttribute="bottom" secondItem="Fz3-nC-Ntf" secondAttribute="bottom" id="Sj0-uG-t0v"/>
-                            <constraint firstItem="Fz3-nC-Ntf" firstAttribute="top" secondItem="vtu-4h-2f3" secondAttribute="top" id="Utw-ot-YX9"/>
-                            <constraint firstItem="vtu-4h-2f3" firstAttribute="trailing" secondItem="Fz3-nC-Ntf" secondAttribute="trailing" id="fHi-kx-puu"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="holder" destination="Fz3-nC-Ntf" id="eSf-9L-36O"/>
+                        <outlet property="albumNameLabel" destination="U8h-MS-9ig" id="DhQ-FZ-Hpt"/>
+                        <outlet property="artistNameLabel" destination="Ox3-Si-np9" id="P7S-lh-sOu"/>
+                        <outlet property="songNameLabel" destination="1Eb-wl-SM4" id="Ei2-i4-vgO"/>
+                        <outlet property="songTimeSlider" destination="oRL-OD-Zxl" id="xRx-p2-l0k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oss-U3-5Jx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1007" y="-619"/>
+            <point key="canvasLocation" x="1005.7971014492755" y="-619.41964285714278"/>
         </scene>
         <!--Music-->
         <scene sceneID="tne-QT-ifu">
@@ -515,8 +558,10 @@
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
