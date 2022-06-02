@@ -337,9 +337,24 @@
                     <view key="view" contentMode="scaleToFill" id="H9e-7A-51b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8B-b9-ll3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JKR-1a-Gi8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l8B-b9-ll3" firstAttribute="leading" secondItem="JKR-1a-Gi8" secondAttribute="leading" id="4Dh-h5-k1B"/>
+                            <constraint firstItem="JKR-1a-Gi8" firstAttribute="bottom" secondItem="l8B-b9-ll3" secondAttribute="bottom" id="I01-kz-mGs"/>
+                            <constraint firstItem="JKR-1a-Gi8" firstAttribute="trailing" secondItem="l8B-b9-ll3" secondAttribute="trailing" id="LiF-pB-0bj"/>
+                            <constraint firstItem="l8B-b9-ll3" firstAttribute="top" secondItem="JKR-1a-Gi8" secondAttribute="top" id="dKj-ox-0KJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myView" destination="l8B-b9-ll3" id="oIt-f3-Z0R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7A9-QI-0Xd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

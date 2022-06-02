@@ -26,6 +26,7 @@
 		843613A62847C88C00D835DF /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613A52847C88C00D835DF /* MusicViewController.swift */; };
 		843613A82847CD5100D835DF /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613A72847CD5100D835DF /* PlayerViewController.swift */; };
 		843613AB2847D97E00D835DF /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843613AA2847D97E00D835DF /* song1.mp3 */; };
+		843613F32848EE3E00D835DF /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 843613F22848EE3E00D835DF /* sample.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		843613A52847C88C00D835DF /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		843613A72847CD5100D835DF /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		843613AA2847D97E00D835DF /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
+		843613F22848EE3E00D835DF /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		843612BA283ED46000D835DF /* FunZone */ = {
 			isa = PBXGroup;
 			children = (
+				843613F12848EE2F00D835DF /* books */,
 				843613AA2847D97E00D835DF /* song1.mp3 */,
 				843613A92847D95200D835DF /* music */,
 				843613782846529700D835DF /* CoreData */,
@@ -120,6 +123,14 @@
 			children = (
 			);
 			path = music;
+			sourceTree = "<group>";
+		};
+		843613F12848EE2F00D835DF /* books */ = {
+			isa = PBXGroup;
+			children = (
+				843613F22848EE3E00D835DF /* sample.pdf */,
+			);
+			path = books;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				843612C8283ED46200D835DF /* Assets.xcassets in Resources */,
 				843612C3283ED46000D835DF /* Main.storyboard in Resources */,
 				843613AB2847D97E00D835DF /* song1.mp3 in Resources */,
+				843613F32848EE3E00D835DF /* sample.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,10 +15,10 @@ struct Book {
 
 class BookViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
     
-
-    var dataText = ["Book1","Book2","Book3","Book4","Book5","Book6","Book7","Book8","Book9","Book10","Book11","Book12","Book13","Book14","Book15","Book16","Book17","Book18","Book19"]
+    var pdfData = ["sample","sample","sample","sample","sample","sample","sample","sample","sample","sample"]
+    var dataText = ["Book1","Book2","Book3","Book4","Book5","Book6","Book7","Book8","Book9","Book10"]
     let imgData = ["book.fill"]
-    var sampleText = ["This is some sample text to see if it works. Thanks"]
+    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -27,7 +27,7 @@ class BookViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BookCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BookCollectionViewCell
         
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.borderWidth = 1.0
@@ -50,7 +50,9 @@ class BookViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView,
       didSelectItemAt indexPath: IndexPath) {
       
-        print(dataText[indexPath.row])
+        let vc = storyboard?.instantiateViewController(withIdentifier: "book") as! SingleBookViewController
+        vc.pdfFile = pdfData[indexPath.row]
+        present(vc, animated: true)
         
       }
     
