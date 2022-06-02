@@ -10,21 +10,33 @@ import CoreData
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+    @IBOutlet weak var rememberMeToggle: UISwitch!
     let userDefault = UserDefaults.standard
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameField.text = userDefault.string(forKey: "userName")
-        passwordField.text = userDefault.string(forKey: "pass")
+        if userDefault.string(forKey: "rememberMe") == "yes"{
+            rememberMeToggle.setOn(true, animated: true)
+            usernameField.text = userDefault.string(forKey: "userName")
+            let req : [String : Any] = [kSecClass as String : kSecClassGenericPassword, kSecAttrAccount as String : usernameField.text!, kSecReturnAttributes as String : true, kSecReturnData as String : true]
+
+            var res : CFTypeRef?
+            if SecItemCopyMatching(req as CFDictionary, &res) == noErr{
+                let data = res as? [String : Any]
+                let userPassword = (data![kSecValueData as String] as? Data)!
+                let pass = String(data: userPassword, encoding: .utf8)
+                passwordField.text = pass
+            }
+        }
         
         // Do any additional setup after loading the view.
     }
 
     
-    @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
     
-    @IBOutlet weak var rememberMeToggle: UISwitch!
     @IBAction func loginButton(_ sender: Any) {
         let req : [String : Any] = [kSecClass as String : kSecClassGenericPassword, kSecAttrAccount as String : usernameField.text!, kSecReturnAttributes as String : true, kSecReturnData as String : true]
         
@@ -37,9 +49,10 @@ class LoginViewController: UIViewController {
             if passwordField.text == pass{
                 userDefault.set(userName, forKey: "currentLoggedIn")
                 if(rememberMeToggle.isOn){
-                    userDefault.set(pass, forKey: "pass")
+                    userDefault.set("yes", forKey: "rememberMe")
                     userDefault.set(userName, forKey: "userName")
                 }else{
+                    userDefault.set("no", forKey: "rememberMe")
                     userDefault.set("", forKey: "pass")
                     userDefault.set("", forKey: "userName")
                 }
@@ -94,3 +107,4 @@ class LoginViewController: UIViewController {
         }
     }
 }
+

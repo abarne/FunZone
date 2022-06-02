@@ -10,10 +10,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="Wi1-Ch-5To">
+            <objects>
+                <viewController storyboardIdentifier="player" id="arH-9g-cEX" customClass="PlayerViewController" customModule="FunZone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x8S-tL-CqU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fz3-nC-Ntf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vtu-4h-2f3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fz3-nC-Ntf" firstAttribute="leading" secondItem="vtu-4h-2f3" secondAttribute="leading" id="01R-Kj-GMl"/>
+                            <constraint firstItem="vtu-4h-2f3" firstAttribute="bottom" secondItem="Fz3-nC-Ntf" secondAttribute="bottom" id="Sj0-uG-t0v"/>
+                            <constraint firstItem="Fz3-nC-Ntf" firstAttribute="top" secondItem="vtu-4h-2f3" secondAttribute="top" id="Utw-ot-YX9"/>
+                            <constraint firstItem="vtu-4h-2f3" firstAttribute="trailing" secondItem="Fz3-nC-Ntf" secondAttribute="trailing" id="fHi-kx-puu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="holder" destination="Fz3-nC-Ntf" id="eSf-9L-36O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oss-U3-5Jx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="-619"/>
+        </scene>
         <!--Music-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="music" id="BYZ-38-t0r" customClass="ViewController" customModule="FunZone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="music" id="BYZ-38-t0r" customClass="MusicViewController" customModule="FunZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,17 +55,56 @@
                                     <constraint firstAttribute="width" constant="60" id="pqD-Dw-lVA"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1ZJ-ZM-uAw">
+                                <rect key="frame" x="0.0" y="114" width="414" height="699"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MusicCell" textLabel="q2z-Nm-mbO" detailTextLabel="jWH-ND-F6s" style="IBUITableViewCellStyleSubtitle" id="wdB-TZ-pDQ">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wdB-TZ-pDQ" id="Ddl-nN-SAy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q2z-Nm-mbO">
+                                                    <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jWH-ND-F6s">
+                                                    <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Y5a-dA-skz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RzO-4c-LHS"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1ZJ-ZM-uAw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DhG-eG-bmu"/>
                             <constraint firstItem="pMa-hn-sv3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lk0-E8-k2Y"/>
+                            <constraint firstItem="1ZJ-ZM-uAw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vrl-eE-Mpd"/>
+                            <constraint firstItem="1ZJ-ZM-uAw" firstAttribute="top" secondItem="pMa-hn-sv3" secondAttribute="bottom" constant="10" id="YtB-5a-YSg"/>
                             <constraint firstItem="pMa-hn-sv3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g0T-Jb-t0q"/>
+                            <constraint firstItem="1ZJ-ZM-uAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yHi-04-cCo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Music" image="music.note.list" catalog="system" id="AJG-rw-YOd">
-                        <color key="badgeColor" systemColor="systemOrangeColor"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Music" image="music.note.list" catalog="system" id="AJG-rw-YOd"/>
+                    <connections>
+                        <outlet property="tableView" destination="1ZJ-ZM-uAw" id="ACh-zm-JDD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +162,7 @@
                             <constraint firstItem="5rJ-Y9-3uH" firstAttribute="centerX" secondItem="mKe-QK-I0o" secondAttribute="centerX" id="o5u-cd-MbZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="XLw-BC-NPM"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="globe.asia.australia.fill" catalog="system" id="XLw-BC-NPM"/>
                     <connections>
                         <outlet property="searchField" destination="5rJ-Y9-3uH" id="G4c-km-E14"/>
                     </connections>
@@ -201,10 +270,11 @@
             <objects>
                 <tabBarController storyboardIdentifier="tabController" automaticallyAdjustsScrollViewInsets="NO" id="GZL-YD-fE0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t9L-Rd-gfe">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" itemSpacing="0.0" itemWidth="0.0" id="t9L-Rd-gfe">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemOrangeColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="kmf-kk-8t6"/>
@@ -319,7 +389,7 @@
                             <constraint firstItem="UhR-X9-i2c" firstAttribute="top" secondItem="rAF-tf-eDS" secondAttribute="top" id="xJ6-jO-SAS"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Books" id="7do-yr-ClP"/>
+                    <tabBarItem key="tabBarItem" title="Books" image="book.fill" catalog="system" id="7do-yr-ClP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsV-Qi-uhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -407,7 +477,7 @@
                             <constraint firstItem="7Ck-OR-i7A" firstAttribute="bottom" secondItem="aUi-CY-dcP" secondAttribute="bottom" id="uu3-8Z-eIE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notes" id="ldo-xp-kKl"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="ldo-xp-kKl"/>
                     <connections>
                         <outlet property="tableView" destination="7Ck-OR-i7A" id="fCd-pV-2E5"/>
                     </connections>
@@ -441,10 +511,12 @@
     <resources>
         <image name="FunZoneLogo" width="294" height="286"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="globe.asia.australia.fill" catalog="system" width="128" height="121"/>
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

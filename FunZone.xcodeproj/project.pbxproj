@@ -22,6 +22,10 @@
 		8436136F28416DAF00D835DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436136E28416DAF00D835DF /* LoginViewController.swift */; };
 		843613712846493000D835DF /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613702846493000D835DF /* NotesViewController.swift */; };
 		8436137328464C8100D835DF /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436137228464C8100D835DF /* NotesTableViewCell.swift */; };
+		843613A42847B93200D835DF /* CustomTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613A32847B93200D835DF /* CustomTabBarVC.swift */; };
+		843613A62847C88C00D835DF /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613A52847C88C00D835DF /* MusicViewController.swift */; };
+		843613A82847CD5100D835DF /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613A72847CD5100D835DF /* PlayerViewController.swift */; };
+		843613AB2847D97E00D835DF /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843613AA2847D97E00D835DF /* song1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		8436136E28416DAF00D835DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		843613702846493000D835DF /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		8436137228464C8100D835DF /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
+		843613A32847B93200D835DF /* CustomTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVC.swift; sourceTree = "<group>"; };
+		843613A52847C88C00D835DF /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		843613A72847CD5100D835DF /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		843613AA2847D97E00D835DF /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,8 @@
 		843612BA283ED46000D835DF /* FunZone */ = {
 			isa = PBXGroup;
 			children = (
+				843613AA2847D97E00D835DF /* song1.mp3 */,
+				843613A92847D95200D835DF /* music */,
 				843613782846529700D835DF /* CoreData */,
 				843612BB283ED46000D835DF /* AppDelegate.swift */,
 				843612BD283ED46000D835DF /* SceneDelegate.swift */,
@@ -91,6 +101,8 @@
 				8436136E28416DAF00D835DF /* LoginViewController.swift */,
 				843613702846493000D835DF /* NotesViewController.swift */,
 				8436137228464C8100D835DF /* NotesTableViewCell.swift */,
+				843613A52847C88C00D835DF /* MusicViewController.swift */,
+				843613A72847CD5100D835DF /* PlayerViewController.swift */,
 			);
 			path = FunZone;
 			sourceTree = "<group>";
@@ -98,8 +110,16 @@
 		843613782846529700D835DF /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				843613A32847B93200D835DF /* CustomTabBarVC.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		843613A92847D95200D835DF /* music */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +183,7 @@
 				843612CB283ED46200D835DF /* LaunchScreen.storyboard in Resources */,
 				843612C8283ED46200D835DF /* Assets.xcassets in Resources */,
 				843612C3283ED46000D835DF /* Main.storyboard in Resources */,
+				843613AB2847D97E00D835DF /* song1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,16 +196,19 @@
 			files = (
 				843612C0283ED46000D835DF /* ViewController.swift in Sources */,
 				843612C6283ED46000D835DF /* FunZone.xcdatamodeld in Sources */,
+				843613A42847B93200D835DF /* CustomTabBarVC.swift in Sources */,
 				843613712846493000D835DF /* NotesViewController.swift in Sources */,
 				84361329284102B800D835DF /* SearchViewController.swift in Sources */,
 				843613232840078700D835DF /* BookViewController.swift in Sources */,
 				8436132728400ECD00D835DF /* SearchBarView.swift in Sources */,
 				843613252840086800D835DF /* BookCollectionViewCell.swift in Sources */,
+				843613A62847C88C00D835DF /* MusicViewController.swift in Sources */,
 				8436132B2841133700D835DF /* SingleBookViewController.swift in Sources */,
 				843612BC283ED46000D835DF /* AppDelegate.swift in Sources */,
 				8436136F28416DAF00D835DF /* LoginViewController.swift in Sources */,
 				843612BE283ED46000D835DF /* SceneDelegate.swift in Sources */,
 				8436137328464C8100D835DF /* NotesTableViewCell.swift in Sources */,
+				843613A82847CD5100D835DF /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
