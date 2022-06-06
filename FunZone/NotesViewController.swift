@@ -14,6 +14,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     let userDefault = UserDefaults.standard
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    @IBOutlet weak var newNoteLabel: UILabel!
     private var models = [NoteItem]()
     private var user = [User]()
     
@@ -24,18 +25,25 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.row]
         let dateFormatter = DateFormatter()
-       // dateFormatter.dateFormat = "YY/MM/dd"
         dateFormatter.dateFormat = "MM/dd/YY"
         let cell = tableView.dequeueReusableCell(withIdentifier: "notesCell", for: indexPath) as! NotesTableViewCell
         cell.cellText?.text = model.name
-        cell.cellDate?.text = dateFormatter.string(from: model.createdAt!)
+        cell.cellDate?.text = "created on: \(dateFormatter.string(from: model.createdAt!))"
+        cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        
         return cell
         
     }
+ 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = models[indexPath.row]
+        
         let sheet = UIAlertController(title: "Edit your note", message: nil, preferredStyle: .actionSheet)
         sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: {_ in
@@ -59,10 +67,10 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = UIColor.clear
         self.setUser()
         self.getAllItems()
-        
-        // Do any additional setup after loading the view.
+
     }
     
     
@@ -133,6 +141,4 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
             print("error saving NoteItem")
         }
     }
-   
-
 }

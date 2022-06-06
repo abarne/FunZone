@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
                     userDefault.set(userName, forKey: "userName")
                 }else{
                     userDefault.set("no", forKey: "rememberMe")
-                    userDefault.set("", forKey: "pass")
+                    //userDefault.set("", forKey: "pass")
                     userDefault.set("", forKey: "userName")
                 }
                 createUser(userName)
@@ -107,4 +107,5 @@ class LoginViewController: UIViewController {
         }
     }
 }
+
 

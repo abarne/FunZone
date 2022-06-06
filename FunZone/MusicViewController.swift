@@ -24,6 +24,8 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.accessoryType = .disclosureIndicator
         cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 18)
         cell.detailTextLabel?.font = UIFont(name: "Helvetica", size: 17)
+        //cell.contentView.backgroundColor = UIColor.clear
+        cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         return cell
     }
     
@@ -45,14 +47,16 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = UIColor.clear
         configureSongs()
 
     }
     
     func configureSongs(){
-        songs.append(Song(name: "Name", albumName: "Album", artistName: "Artist", trackName: "song1"))
-        songs.append(Song(name: "Name2", albumName: "Album2", artistName: "Artist2", trackName: "song1"))
-        songs.append(Song(name: "Name3", albumName: "Album3", artistName: "Artist3", trackName: "song1"))
+        songs.append(Song(name: "Song 1", albumName: "Album", artistName: "Artist", trackName: "song1"))
+        songs.append(Song(name: "Song 2", albumName: "Album2", artistName: "Artist2", trackName: "song1"))
+        songs.append(Song(name: "Song 3", albumName: "Album3", artistName: "Artist3", trackName: "song1"))
+        songs.append(Song(name: "Song 4", albumName: "Album4", artistName: "Artist4", trackName: "song1"))
     }
     
 

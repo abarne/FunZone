@@ -15,9 +15,9 @@ struct Book {
 
 class BookViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
     
-    var pdfData = ["sample","sample","sample","sample","sample","sample","sample","sample","sample","sample"]
-    var dataText = ["Book1","Book2","Book3","Book4","Book5","Book6","Book7","Book8","Book9","Book10"]
-    let imgData = ["book.fill"]
+    var pdfData = ["sample","lorem-ipsum","pdf","c4611_sample_explain","pdf-sample"]
+    var dataText = ["Deathly Hallows","Chamber of Secrets","HalfBlood Prince","Phoenix","Sorcerer's Stone"]
+    let imgData = ["deathly", "chamber", "halfblood", "phoenix", "sorcerer"]
     
     
     
@@ -32,7 +32,10 @@ class BookViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.borderWidth = 1.0
         cell.bookCellLabel.text = dataText[indexPath.row]
-        cell.bookCellImage.image = UIImage(systemName: imgData[0])
+        cell.bookCellImage.image = UIImage(named: imgData[indexPath.row])
+        
+        
+        
         
         return cell
         

@@ -27,6 +27,10 @@
 		843613A82847CD5100D835DF /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843613A72847CD5100D835DF /* PlayerViewController.swift */; };
 		843613AB2847D97E00D835DF /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843613AA2847D97E00D835DF /* song1.mp3 */; };
 		843613F32848EE3E00D835DF /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 843613F22848EE3E00D835DF /* sample.pdf */; };
+		8436147A284D995D00D835DF /* lorem-ipsum.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84361479284D995D00D835DF /* lorem-ipsum.pdf */; };
+		8436147C284D99D100D835DF /* pdf-sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8436147B284D99D100D835DF /* pdf-sample.pdf */; };
+		8436147E284D99F500D835DF /* pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8436147D284D99F500D835DF /* pdf.pdf */; };
+		84361480284D9A2600D835DF /* c4611_sample_explain.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8436147F284D9A2600D835DF /* c4611_sample_explain.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		843613A72847CD5100D835DF /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		843613AA2847D97E00D835DF /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
 		843613F22848EE3E00D835DF /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
+		84361479284D995D00D835DF /* lorem-ipsum.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "lorem-ipsum.pdf"; sourceTree = "<group>"; };
+		8436147B284D99D100D835DF /* pdf-sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "pdf-sample.pdf"; sourceTree = "<group>"; };
+		8436147D284D99F500D835DF /* pdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf.pdf; sourceTree = "<group>"; };
+		8436147F284D9A2600D835DF /* c4611_sample_explain.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = c4611_sample_explain.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +136,11 @@
 		843613F12848EE2F00D835DF /* books */ = {
 			isa = PBXGroup;
 			children = (
+				84361479284D995D00D835DF /* lorem-ipsum.pdf */,
 				843613F22848EE3E00D835DF /* sample.pdf */,
+				8436147D284D99F500D835DF /* pdf.pdf */,
+				8436147F284D9A2600D835DF /* c4611_sample_explain.pdf */,
+				8436147B284D99D100D835DF /* pdf-sample.pdf */,
 			);
 			path = books;
 			sourceTree = "<group>";
@@ -192,9 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				843612CB283ED46200D835DF /* LaunchScreen.storyboard in Resources */,
+				8436147E284D99F500D835DF /* pdf.pdf in Resources */,
+				8436147A284D995D00D835DF /* lorem-ipsum.pdf in Resources */,
 				843612C8283ED46200D835DF /* Assets.xcassets in Resources */,
 				843612C3283ED46000D835DF /* Main.storyboard in Resources */,
 				843613AB2847D97E00D835DF /* song1.mp3 in Resources */,
+				84361480284D9A2600D835DF /* c4611_sample_explain.pdf in Resources */,
+				8436147C284D99D100D835DF /* pdf-sample.pdf in Resources */,
 				843613F32848EE3E00D835DF /* sample.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
