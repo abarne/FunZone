@@ -53,7 +53,6 @@ class LoginViewController: UIViewController {
                     userDefault.set(userName, forKey: "userName")
                 }else{
                     userDefault.set("no", forKey: "rememberMe")
-                    //userDefault.set("", forKey: "pass")
                     userDefault.set("", forKey: "userName")
                 }
                 createUser(userName)
@@ -71,17 +70,27 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signupButton(_ sender: Any) {
-        let attribute : [String : Any] = [kSecClass as String : kSecClassGenericPassword, kSecAttrAccount as String : usernameField.text!, kSecValueData as String : passwordField.text!.data(using: .utf8)!]
-        if SecItemAdd(attribute as CFDictionary, nil) == noErr {
+        let trimmedUser = usernameField.text?.trimmingCharacters(in: .whitespaces)
+        let trimmedPass = passwordField.text?.trimmingCharacters(in: .whitespaces)
+        if(trimmedUser?.count == 0 || trimmedPass?.count == 0){
             let defaultAction = UIAlertAction(title: "Ok", style: .default){(action) in}
-            let alert = UIAlertController(title: "Sign up Successful", message: "Please log in with your credentials", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Error", message: "Fields cannot be empty", preferredStyle: .alert)
             alert.addAction(defaultAction)
             self.present(alert, animated: true)
+            return
         }else{
-            let defaultAction = UIAlertAction(title: "Ok", style: .default){(action) in}
-            let alert = UIAlertController(title: "Error", message: "An error has occurred", preferredStyle: .alert)
-            alert.addAction(defaultAction)
-            self.present(alert, animated: true)
+            let attribute : [String : Any] = [kSecClass as String : kSecClassGenericPassword, kSecAttrAccount as String : usernameField.text!, kSecValueData as String : passwordField.text!.data(using: .utf8)!]
+            if SecItemAdd(attribute as CFDictionary, nil) == noErr {
+                let defaultAction = UIAlertAction(title: "Ok", style: .default){(action) in}
+                let alert = UIAlertController(title: "Sign up Successful", message: "Please log in with your credentials", preferredStyle: .alert)
+                alert.addAction(defaultAction)
+                self.present(alert, animated: true)
+            }else{
+                let defaultAction = UIAlertAction(title: "Ok", style: .default){(action) in}
+                let alert = UIAlertController(title: "Error", message: "An error has occurred", preferredStyle: .alert)
+                alert.addAction(defaultAction)
+                self.present(alert, animated: true)
+            }
         }
     }
     func createUser(_ userName: String){
