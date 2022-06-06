@@ -401,7 +401,7 @@
         <!--Books-->
         <scene sceneID="V3j-1d-W1l">
             <objects>
-                <viewController id="GF4-3r-S1L" customClass="BookViewController" customModule="FunZone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GF4-3r-S1L" customClass="NewBookViewController" customModule="FunZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iT7-GV-fOk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -486,6 +486,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Books" image="book.fill" catalog="system" id="7do-yr-ClP"/>
+                    <connections>
+                        <outlet property="collectionView" destination="UhR-X9-i2c" id="QtO-Bd-xcS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsV-Qi-uhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

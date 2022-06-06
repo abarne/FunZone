@@ -7,11 +7,7 @@
 
 import UIKit
 
-struct Book {
-    let bookTitle: String
-    let bookImage: UIImage
-    let bookText: String
-}
+
 
 class BookViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
     

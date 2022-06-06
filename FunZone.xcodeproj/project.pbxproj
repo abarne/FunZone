@@ -31,6 +31,7 @@
 		8436147C284D99D100D835DF /* pdf-sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8436147B284D99D100D835DF /* pdf-sample.pdf */; };
 		8436147E284D99F500D835DF /* pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8436147D284D99F500D835DF /* pdf.pdf */; };
 		84361480284D9A2600D835DF /* c4611_sample_explain.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8436147F284D9A2600D835DF /* c4611_sample_explain.pdf */; };
+		84361482284E4E1C00D835DF /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361481284E4E1C00D835DF /* NewBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		8436147B284D99D100D835DF /* pdf-sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "pdf-sample.pdf"; sourceTree = "<group>"; };
 		8436147D284D99F500D835DF /* pdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf.pdf; sourceTree = "<group>"; };
 		8436147F284D9A2600D835DF /* c4611_sample_explain.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = c4611_sample_explain.pdf; sourceTree = "<group>"; };
+		84361481284E4E1C00D835DF /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				8436137228464C8100D835DF /* NotesTableViewCell.swift */,
 				843613A52847C88C00D835DF /* MusicViewController.swift */,
 				843613A72847CD5100D835DF /* PlayerViewController.swift */,
+				84361481284E4E1C00D835DF /* NewBookViewController.swift */,
 			);
 			path = FunZone;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				843613252840086800D835DF /* BookCollectionViewCell.swift in Sources */,
 				843613A62847C88C00D835DF /* MusicViewController.swift in Sources */,
 				8436132B2841133700D835DF /* SingleBookViewController.swift in Sources */,
+				84361482284E4E1C00D835DF /* NewBookViewController.swift in Sources */,
 				843612BC283ED46000D835DF /* AppDelegate.swift in Sources */,
 				8436136F28416DAF00D835DF /* LoginViewController.swift in Sources */,
 				843612BE283ED46000D835DF /* SceneDelegate.swift in Sources */,
